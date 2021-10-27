@@ -7,7 +7,7 @@ public class Reference extends Book{
 
     @Override
     String description() {
-        return "Word Maps(title) all information is real";
+        return this.getTitle() + " all information is real";
     }
 
     public String getCategory() {

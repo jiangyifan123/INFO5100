@@ -8,7 +8,7 @@ public class NonFiction extends Book implements iBorrowable{
 
     @Override
     String description() {
-        return "Anne Frank(" + this.getTitle() + ") all events are true and based on real fact";
+        return this.getTitle() + " all events are true and based on real fact";
     }
 
     @Override

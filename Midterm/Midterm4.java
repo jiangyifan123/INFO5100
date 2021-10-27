@@ -25,6 +25,6 @@ public class Midterm4 {
         return ans;
     }
     public static void main(String[] args) {
-        System.out.println(solution("abcabcbb"));
+        System.out.println(solution("ab"));
     }
 }

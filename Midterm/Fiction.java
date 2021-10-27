@@ -7,7 +7,7 @@ public class Fiction extends Book implements iBorrowable{
 
     @Override
     String description() {
-        return "Frankenstein(" + this.getTitle() + ") all events are true and based on real facts";
+        return this.getTitle() + " all events are true and based on real facts";
     }
 
     @Override
