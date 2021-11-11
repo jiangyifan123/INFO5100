@@ -2,7 +2,6 @@ package Question4_2;
 
 class TrafficLight {
 
-    // Signal maintains the road which is green at the moment
     private final Signal signal;
 
     public TrafficLight() {
@@ -27,7 +26,6 @@ class TrafficLight {
     }
 
     class Signal {
-        // 1 corresponds to the Road A
         int greenRoad = 1;
     }
 }
