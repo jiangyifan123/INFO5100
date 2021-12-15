@@ -1,11 +1,16 @@
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Final_4 {
     public static String addReleaseToTitle(Movie m){
         SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
         String year = yearFormat.format(Date.parse(String.valueOf(m.getRelease())));
         return year + m.getTitle();
+    }
+    public static Movie addClassicToTitle(Movie m){
+        m.setTitle("(Classic)" + m.getTitle());
+        return m;
     }
     public static void main(String[] args) {
         Netflix netflix = new Netflix();
@@ -37,9 +42,11 @@ public class Final_4 {
         Date start = new GregorianCalendar(1990, GregorianCalendar.MONTH, 1).getTime();
 
         System.out.println("add (classic) to the title of the movies before 2000");
-        for(Movie m: movies){
-            if(m.getRelease().before(end))
-                m.setTitle("(Classic)" + m.getTitle());
+        List<Movie> MovieList = movies.stream()
+                .map(it -> addClassicToTitle(it))
+                .collect(Collectors.toList());
+        for(Movie m: MovieList){
+            System.out.println(m.getTitle());
         }
         System.out.println();
 
